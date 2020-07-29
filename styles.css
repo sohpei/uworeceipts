@@ -1,0 +1,459 @@
+
+  
+  a {
+      color: #000;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px;
+    font-family: ibm-plex-serif, sans-serif;
+    font-weight: 300;
+    line-height: 1.25;
+  }
+  
+  .site {
+    background: radial-gradient(50% 50% at 50% 50%, #e6d3ff 0%, #fff 100%), #e6d3ff;
+    background-repeat: no-repeat;
+    color: #000;
+  }
+  
+  .site__header,
+  .site__nav-list {
+    display: flex;
+  }
+  
+  .site__header {
+    position: fixed;
+    top: 0;
+    left: 1.25rem;
+    writing-mode: vertical-rl;
+    height: 100%;
+    padding: 1.25rem 0;
+    z-index: 20; /* to overlap the grid component */
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    z-index: 1;
+  }
+  
+  .site__header > * {
+    flex: 1 1 auto;
+    padding-bottom: .625rem;
+  }
+  
+  .site__nav-list {
+    justify-content: space-between;
+    list-style-type: none;
+  }
+  
+  .site__nav {
+    padding-bottom: 0;
+  }
+  
+  .site__nav-link {
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    padding-bottom: .625rem;
+  }
+  
+  .site__nav-list li:last-child .site__nav-link {
+    padding-bottom: 0;
+  }
+  
+  .block {
+    display: block;
+  }
+  
+  .main {
+    padding: 5rem 2rem 2rem 5rem;
+    display: flex;
+    justify-content: center; /* center content horizontally */
+    align-items: center; /* center content vertically */
+    min-height: 100vh; /* make content as tall as the viewport */
+    width: 100%;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: ibm-plex-serif, sans-serif;
+  }
+
+  
+  @media screen and (min-width: 40rem) {
+      .heading {
+          font-size: 2rem;
+          position: absolute;
+          left: 0;
+          top: 2rem;
+          z-index: 10; /* to be on top of grid */
+      }
+  }
+
+  mark {
+    color: #000;
+    background: none;
+    line-height: 1.35;
+    padding: .375rem;
+  }
+  
+  
+  .background {
+    display: block;
+    width: 100%;
+  }
+
+  /*grid link stuff */
+
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    position: relative;
+  }
+
+  .grid-container {
+    margin: 0 auto; // centers itself horizontally
+    padding: 0 10%;
+    max-width: 65rem; // restricts the grid from getting too big
+  }
+  
+  .grid__item--bg {
+    grid-column: 4 / span 6;
+    z-index: 0;
+    grid-row: 1 / -1;
+  }
+
+  @media screen and (max-width: 40rem) {
+    .grid__item--bg {
+        grid-column: 4 / span 6;
+    z-index: 0;
+    grid-row: 3/ span 4;
+    }
+}
+
+  .grid__item-linkhelp {
+    
+    grid-column: 2/ span 1;
+    z-index: 1;
+    grid-row: 1/1;
+    width: 100px;
+    display: block;
+  }
+
+  .grid__item-heard {
+    grid-column: 4 / span 12;
+    z-index: 1;
+    grid-row: 4/ 4;
+    width: 200px;
+    
+  }
+
+
+
+  /*content*/
+
+  body{
+    font-family: 'ibm-plex-mono', mono;
+    font-size: 14px;
+    color: #2f2f2f;
+    background-color: #f9f7f1;
+}
+header{
+    font-family: 'ibm-plex-serif', serif;
+    font-weight: 900;
+    font-size: 80px;
+    display: inline-block;
+    line-height: 72px;
+    margin-bottom: 20px;
+
+}
+p{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.head{
+    text-align: center;
+    position: relative;
+
+
+}
+
+.headerobjectswrapper{
+}
+
+.subhead{
+    text-transform: uppercase;
+    border-bottom: 2px solid #2f2f2f;
+    border-top: 2px solid #2f2f2f;
+    padding: 12px 0 12px 0;
+
+}
+.weatherforcastbox{
+    position: relative;
+    width: 12%;
+    left: 10px;
+    border: 3px double #2f2f2f;
+    padding: 10px 15px 10px 15px;
+    line-height: 20px;
+    display: inline-block;
+    margin: 0 50px 20px -360px;
+}
+.content{
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+    word-spacing: -.31em;
+    display: inline-block;
+    margin: 30px 2% 0 2%;
+    background-color: #fff;
+    z-index: 5;
+
+
+}
+.collumns{
+
+}
+
+.collumn{
+    font-size: 14px;
+    line-height: 20px;
+    width: 30%;
+    display: inline-block;
+    padding: 0 1% 0 1%;
+    vertical-align: top;
+    margin-bottom: 50px;
+    transition: all .7s;
+    font-family: ibm-plex-mono;
+}
+.collumn + .collumn { 
+  border-left: 1px solid #2f2f2f;
+}
+.collumn .headline{
+    text-align: center;
+    line-height: normal;
+    display: block;
+    margin: 0 auto;
+
+
+}
+.collumn .headline.hl1{
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 10px 0 10px 0;
+
+}
+
+.collumn .headline.hl2{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+
+.collumn .headline.hl2:before{
+    border-top: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 7px;
+    display: block;
+    margin: 0 auto;
+}
+.collumn .headline.hl2:after{
+    border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 13px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.collumn .headline.hl3{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 36px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.collumn .headline.hl4{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.collumn .headline.hl4:before{
+    border-top: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 7px;
+    display: block;
+    margin: 0 auto;
+}
+.collumn .headline.hl4:after{
+    border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 10px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.collumn .headline.hl5{
+    font-weight: 400;
+    font-size: 42px;
+    text-transform: uppercase;
+    font-style: italic;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.collumn .headline.hl6{
+    font-weight: 400;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.collumn .headline.hl6:before{
+    border-top: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 7px;
+    display: block;
+    margin: 0 auto;
+}
+.collumn .headline.hl6:after{
+    border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 10px;
+    display: block;
+    margin: 0 auto;
+
+}
+.collumn .headline.hl7{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 0 10px 0;
+}
+.collumn .headline.hl8{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.collumn .headline.hl9{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.collumn .headline.hl10{
+    font-weight: 700;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+}
+.collumn .citation{
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    line-height: 44px;
+    /*font-style: italic;*/
+    text-align: center;
+    font-weight: 400;
+    display: block;
+    margin: 40px 0 40px 0;
+    font-feature-settings: "liga", "dlig";
+
+}
+.collumn .citation:before{
+    border-top: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 16px;
+    display: block;
+    margin: 0 auto;
+}
+.collumn .citation:after{
+    border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    height: 16px;
+    display: block;
+    margin: 0 auto;
+}
+.collumn .figure {
+	  margin: 0 0 20px;
+}
+.collumn .figcaption{
+	font-style: italic;
+	font-size: 12px;
+}
+.media {
+    -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
+    filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);
+    mix-blend-mode: multiply;
+    width: 100%;
+}
+/*________________________________________________________________________________________________________________________________*/
+/*MEDIAQUERIES*/
+@media only all and (max-width: 1300px) {
+    .weatherforcastbox{
+        display: none;
+    }
+
+}
+@media only all and (max-width: 1200px) {
+    .collumn{
+        width: 31%;
+    }
+
+}
+    @media only all and (max-width: 900px) {
+    .collumn{
+        width: 47%;
+    }
+
+}
+@media only all and (max-width: 600px) {
+    .collumn{
+        width: 100%;
+    }
+	.collumn + .collumn {
+				border-left: none;
+      	border-bottom: 1px solid #2f2f2f;
+	}
+    header{
+        max-width: 320px;
+        font-size: 60px;
+        line-height: 54px;
+        overflow: hidden;
+    }
+
+}
+  /*front page shit */
+
+
+  /* cards*/
+  
+  
+
+
+  
+  /*fun visual s*/
+  
+  
+  
