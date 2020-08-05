@@ -7,7 +7,8 @@
       color: #000;
   }
   a:hover {
-    color: #aa80ea;
+    background-color: #aa80ea;
+    color: #fff;
   }
 
   * {
@@ -214,7 +215,7 @@ p{
     line-height: 0;
     word-spacing: -.31em;
     display: inline-block;
-    margin: 30px 2% 0 2%;
+    width: 100%;
     z-index: 10;
     background-color: #fff;
 }
@@ -318,22 +319,7 @@ p{
     }
 
 }
-/*background */
-.background {
-  display: absolute;;
-}
 
-.backgrid {
-  display: grid;
-  grid-template-rows: 12;
-  grid-template-columns: 12;
-}
-
-.decrease {
-  text-align: left;
-  grid-row: 12;
-  grid-column: 12;
-}
 
   /*ffoott */
 
@@ -353,33 +339,44 @@ p{
   */
   .sticker {
     position: absolute;
-    size: 200px;
+    right: 27%;
+    width: 500px;
+    overflow: hidden;
   }
+
+  @media only all and (max-width: 600px) {
+    .sticker {
+      width: 300px;
+      right: 0px;
+    }
+
+}
 
   .call {
     position: absolute;
     top: 0;
     right: 1.25rem;
-    height: 100%;
     padding: 1.25rem 0;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 2rem;
     z-index: 1;
+    text-align: right;
   }
 
   .decrease {
     position: absolute;
     top: 80%;
     left: 1.25rem;
-    height: 100%;
     padding: 1.25rem 0;
     font-family: 'IBM Plex Mono', monospace;
+    font-weight: 800;
+    font-style: italic;
     font-size: 2rem;
     z-index: 1;
+    width: 200px;
   }
-
-  .doshit {
-    display: grid;
-    position: relative;
-    background-color: #fff;
-  }
+.docontainer {
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+} 
