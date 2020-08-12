@@ -15,6 +15,15 @@
     box-sizing: border-box;
   }
   
+  ::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: #aa80ea;
+  }
+  
+  ::selection {
+    color: #fff;
+    background: #aa80ea;
+  }
   html {
     font-size: 16px;
     font-family: ibm-plex-serif, sans-serif;
@@ -389,6 +398,12 @@ p{
   display: grid;
   padding: 3px;
 }
+
+.whole {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
 .send {
   border: 2px dotted #000;
   align-self:center;
@@ -401,6 +416,20 @@ p{
   letter-spacing:1px;
   outline:none;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  margin: 5px;
+  font-family: Calibri;
+}
+
+table {
+  border: 2px dotted #000;
+  align-self:center;
+  padding:1rem 1rem;
+  margin:0 1rem;
+  transition:all .5s ease;
+  color:#41403E;
+  font-size:1rem;
+  letter-spacing:1px;
+  outline:none;
   margin: 5px;
   font-family: Calibri;
 }
