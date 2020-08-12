@@ -491,3 +491,11 @@ button{
   color: #fff;
   padding: 3px;
 }
+.tools {
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  padding: 3px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
