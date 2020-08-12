@@ -16,13 +16,13 @@
   }
   
   ::-moz-selection { /* Code for Firefox */
-    color: #fff;
+    color: #000;
     background: #aa80ea;
   }
   
   ::selection {
-    color: #fff;
-    background: #aa80ea;
+    color: #000;
+    background:#aa80ea;
   }
   html {
     font-size: 16px;
@@ -55,6 +55,7 @@
     font-size: 0.8rem;
     z-index: 15;
   }
+
 
   .linky:hover {
     color: #aa80ea;
@@ -168,6 +169,9 @@
   }
   .subtitle {
     left: 80px;
+  }
+  .site__header{
+    position: relative;
   }
 
 }
@@ -385,6 +389,19 @@ p{
     width: 200px;
   }
 
+  .submit {
+    position: absolute;
+    position: absolute;
+    top: 80%;
+    right: 1.25rem;
+    padding: 1.25rem 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 2rem;
+    z-index: 1;
+    width: 200px;
+  }
 .doparent {
   display: flex;
   background-color: #fff;
@@ -399,11 +416,17 @@ p{
   padding: 3px;
 }
 
-.whole {
-  display: flex;
-  flex-wrap: wrap;
-  
+
+ .send::selection {
+  background-color: yellow;
+  color: #000;
 }
+
+.template::selection {
+  background-color: yellow;
+  color: #000;
+}
+
 .send {
   border: 2px dotted #000;
   align-self:center;
@@ -420,19 +443,6 @@ p{
   font-family: Calibri;
 }
 
-table {
-  border: 2px dotted #000;
-  align-self:center;
-  padding:1rem 1rem;
-  margin:0 1rem;
-  transition:all .5s ease;
-  color:#41403E;
-  font-size:1rem;
-  letter-spacing:1px;
-  outline:none;
-  margin: 5px;
-  font-family: Calibri;
-}
 .template {
   font-family: Calibri;
   font-weight: 400;
